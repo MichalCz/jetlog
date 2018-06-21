@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/signicode/jetlog#readme",
   "dependencies": {
-    "scramjet": "^4.13.0"
+    "scramjet": "^4.15.4"
   }
 }
