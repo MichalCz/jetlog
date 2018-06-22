@@ -21,11 +21,19 @@
   ],
   "author": "Signicode <opensource@signicode.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "bugs": {
     "url": "https://github.com/signicode/jetlog/issues"
   },
   "homepage": "https://github.com/signicode/jetlog#readme",
   "dependencies": {
     "scramjet": "^4.15.4"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-plugin-node": "^6.0.1"
   }
 }
