@@ -1,10 +1,9 @@
-const JetLog = require("./lib/jetlog");
+const {JetLog} = require("./lib/jetlog");
 const {testEnv, getEnv} = require("./lib/env-default");
 
 const defaultLogger = new JetLog()
-    .use(getEnv('JETLOG_REPORTER', './lib/entry-reporter'))
-    .catch(e => `Invalid log entry in ${e && e.stack && e.stack.split('\n')[1]}`);
-defaultLogger.JetLog = JetLog;
+    .use(getEnv("JETLOG_REPORTER", "./lib/entry-reporter"))
+    .catch(e => `Invalid log entry in ${e && e.stack && e.stack.split("\n")[1]}`);
 
 if (testEnv("JETLOG", true)) {
     defaultLogger
@@ -20,3 +19,4 @@ if (testEnv("JETLOG_FILTER")) {
 }
 
 module.exports = defaultLogger;
+module.exports.JetLog = JetLog;
