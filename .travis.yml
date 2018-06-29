@@ -3,7 +3,7 @@ node_js:
   - "node"
   - "9"
   - "8"
-script: npm preversion
+script: npm run preversion
 cache:
   apt: true
   directories:
