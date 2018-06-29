@@ -33,4 +33,4 @@ gulp.task("tsd", tsd(FILES.slice().reverse(), {
 gulp.task("docs", gulp.series("tsd", "make_docs"));
 gulp.task("fulltest", gulp.series("lint", "test"));
 gulp.task("default", gulp.series("docs", "fulltest"));
-gulp.task("prerelease", gulp.series("default", "scm_clean"));
+gulp.task("preversion", gulp.series("default", "scm_clean"));

@@ -18,11 +18,6 @@ declare interface JetLogOptions {
 
 declare class JetLog {
     /**
-     * Main jetlog class.
-     */
-    constructor();
-
-    /**
      * Constructor of jetlog
      * @param options options for the logger.
      */
@@ -121,11 +116,6 @@ declare function exports(log: JetLog): void;
  */
 declare module 'jetlog' {
     declare class JetLog {
-        /**
-         * Main jetlog class.
-         */
-        constructor();
-
         /**
          * Constructor of jetlog
          * @param options options for the logger.

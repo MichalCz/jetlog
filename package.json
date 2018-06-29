@@ -4,7 +4,8 @@
   "description": "Streamet logger with pluggable outputs and stream interface.",
   "main": "lib/index",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp test",
+    "preversion": "gulp preversion"
   },
   "repository": {
     "type": "git",
@@ -43,7 +44,7 @@
     "gulp-shell": "^0.6.5",
     "jsdoc-api": "^4.0.3",
     "jsdoc-parse": "^3.0.1",
-    "nodeunit-tape-compat": "^1.0.0",
+    "nodeunit-tape-compat": "^1.0.1",
     "scramjet-core": "^4.14.1"
   }
 }
