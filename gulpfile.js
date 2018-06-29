@@ -2,7 +2,7 @@
 
 const gulp = require("gulp");
 
-const {lint, docs, test_legacy, readme, scm_clean} = require("scramjet-core/scripts/tasks");
+const {lint, docs, test_legacy, scm_clean} = require("scramjet-core/scripts/tasks");
 const {tsd} = require("scramjet/scripts/tasks");
 
 const FILES = [
