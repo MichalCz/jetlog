@@ -8,8 +8,12 @@ Streams are based on [`scramjet`](https://github.com/signicode/scramjet) so you 
 
 ## Default output
 
-```
+No colors, no fancy line drawing, nothing yet really - just a simple and parsable log output...
 
+```
+2018-06-29T15:07:37.339Z jetlog [info] defaultOutput(simple.js:52) Message1
+2018-06-29T15:07:37.339Z jetlog [log] defaultOutput(simple.js:53) Message2
+2018-06-29T15:07:37.339Z jetlog [error] defaultOutput(simple.js:54) Message3!
 ```
 
 ## Usage
@@ -61,7 +65,19 @@ Jetlog's default logger (the one exposed as `module.exports`) behavior can be ch
 
 ### JetLog class
 
+JetLog class implements the following methods:
 
+* [`new JetLog(options)`](docs/jetlog.md#new_JetLog_new) - constructor
+* [`jetLog.level(value)`](docs/jetlog.md#JetLog+level) - creates a new piped stream containing only the required level (may be called multiple times).
+
+Logging methods are as follows in the following order:
+
+* [`jetLog.error()`](docs/jetlog.md#JetLog+error)
+* [`jetLog.warn()`](docs/jetlog.md#JetLog+warn)
+* [`jetLog.log()`](docs/jetlog.md#JetLog+log)
+* [`jetLog.info()`](docs/jetlog.md#JetLog+info)
+* [`jetLog.debug()`](docs/jetlog.md#JetLog+debug)
+* [`jetLog.trace()`](docs/jetlog.md#JetLog+trace)
 
 ### JetLog Entries
 
@@ -77,17 +93,6 @@ Props:
 * [`entry.extra`](docs/entry.md#Entry+extra) - Array of any extra arguments passed on log time
 
 [See more about Entry here](docs/entry.md)
-
-### :JetLog
-
-Main jetlog class.
-
-[Detailed :JetLog docs here](docs/jetlog.md)
-
-**Most popular methods:**
-
-
-
 
 ## License
 

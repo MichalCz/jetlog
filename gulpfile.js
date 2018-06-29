@@ -6,19 +6,20 @@ const {lint, docs, test_legacy, readme, scm_clean} = require("scramjet-core/scri
 const {tsd} = require("scramjet/scripts/tasks");
 
 const FILES = [
-    "./index.js",
+    "./lib/index.js",
     "./lib/entry-reporter.js",
     "./lib/entry.js",
+    "./lib/getlog.js",
     "./lib/jetlog.js"
 ];
 
 gulp.task("lint", lint());
 gulp.task("test", test_legacy("test/**/*.js"));
 gulp.task("scm_clean", scm_clean());
-gulp.task("make_docs", docs(FILES.slice(), {plugin: "scramjet-core/jsdoc2md/plugin-docs.js"}, "docs/"));
+gulp.task("make_docs", docs(FILES.slice(), {plugin: ["scramjet-core/jsdoc2md/plugin-docs.js", "./jsdoc2md/plugin-docs.js"]}, "docs/"));
 
-gulp.task("tsd", tsd(FILES.slice(), {
-    plugins: ["./node_modules/scramjet-core/jsdoc2md/plugin-tsd.js"],
+gulp.task("tsd", tsd(FILES.slice().reverse(), {
+    plugins: ["scramjet/jsdoc2md/plugin-tsd.js"],
     opts: {
         "tags": {
             "allowUnknownTags": true,
