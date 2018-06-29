@@ -4,7 +4,7 @@
   "description": "Streamet logger with pluggable outputs and stream interface.",
   "main": "lib/index",
   "scripts": {
-    "test": "gulp test",
+    "test": "gulp",
     "preversion": "gulp preversion"
   },
   "repository": {

@@ -2,8 +2,7 @@
 
 const gulp = require("gulp");
 
-const {exec: execp} = require("child_process");
-const {lint, docs, test_legacy} = require("scramjet-core/scripts/tasks");
+const {lint, docs, test_legacy, scm_clean} = require("scramjet-core/scripts/tasks");
 const {tsd} = require("scramjet/scripts/tasks");
 
 const FILES = [
@@ -14,21 +13,9 @@ const FILES = [
     "./lib/jetlog.js"
 ];
 
-function scm_clean (cb) {
-    execp("git status --porcelain", (err, stdout) => {
-        if (err) {
-            cb(err);
-        } else if (stdout.trim()) {
-            cb(new Error("Workdir not clean: \n  " + stdout.trim().replace("\n", "  \n")));
-        } else {
-            cb();
-        }
-    });
-}
-
 gulp.task("lint", lint());
 gulp.task("test", test_legacy("test/**/*.js"));
-gulp.task("scm_clean", scm_clean);
+gulp.task("scm_clean", scm_clean());
 gulp.task("make_docs", docs(FILES.slice(), {plugin: ["scramjet-core/jsdoc2md/plugin-docs.js", "./jsdoc2md/plugin-docs.js"]}, "docs/"));
 
 gulp.task("tsd", tsd(FILES.slice().reverse(), {
