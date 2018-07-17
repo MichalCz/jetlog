@@ -31,14 +31,6 @@ declare class JetLog {
     level(value: number): JetLog;
 
     /**
-     * Message method - should not be called directly.
-     * @param level
-     * @param msg
-     * @param extra
-     */
-    private message(level: number, msg: string, ...extra: Object[]): void;
-
-    /**
      * Error method - adds a message to the log at level 1
      */
     error(): Promise;
@@ -104,12 +96,6 @@ declare class Entry {
     text: any;
 
 }
-
-/**
- * 
- * @param log
- */
-declare function exports(log: JetLog): void;
 
 /**
  * The main export is a global instance of the JetLog class automatically.
