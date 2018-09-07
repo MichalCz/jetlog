@@ -25,7 +25,7 @@ gulp.task("tsd", tsd(FILES.slice().reverse(), {
             "allowUnknownTags": true,
             "dictionaries": ["jsdoc","closure"]
         },
-        template: "@otris/jsdoc-tsd/src-out/core",
+        template: "@otris/jsdoc-tsd/src-out/src/core",
         destination: ".d.ts/jetlog.d.ts"
     }
 }));
