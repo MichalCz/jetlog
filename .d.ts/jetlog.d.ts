@@ -101,7 +101,7 @@ declare class Entry {
  * The main export is a global instance of the JetLog class automatically.
  */
 declare module 'jetlog' {
-    declare class JetLog {
+    class JetLog {
         /**
          * Constructor of jetlog
          * @param options options for the logger.
@@ -113,7 +113,7 @@ declare module 'jetlog' {
     /**
      * Entry class
      */
-    declare class Entry {
+    class Entry {
         /**
          * Entry class
          */
