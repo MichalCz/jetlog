@@ -12,7 +12,8 @@
     * [jetLog.info()](#JetLog+info)
     * [jetLog.debug()](#JetLog+debug)
     * [jetLog.trace()](#JetLog+trace)
-    * [JetLog:defaults](#JetLog.defaults)  [<code>JetLogOptions</code>](#JetLogOptions)
+    * [JetLog:defaults](#JetLog.defaults)  <code>JetLogOptions</code>
+    * [JetLog:JetLogOptions](#JetLog.JetLogOptions)  <code>module.scramjet:ScramjetOptions</code>
 
 <a name="new_JetLog_new"></a>
 
@@ -22,7 +23,7 @@ Constructor of jetlog
 
 | Param | Type | Description |
 | --- | --- | --- |
-| options | [<code>JetLogOptions</code>](#JetLogOptions) | options for the logger. |
+| options | <code>JetLogOptions</code> | options for the logger. |
 
 <a name="JetLog+level"></a>
 
@@ -77,12 +78,12 @@ Trace method - adds a message to the log at level 6
 Defaults
 
 **Kind**: static property of [<code>JetLog</code>](#JetLog)  
-<a name="JetLogOptions"></a>
+<a name="JetLog.JetLogOptions"></a>
 
-## JetLogOptions : module.scramjet:ScramjetOptions
+### JetLog:JetLogOptions : module.scramjet:ScramjetOptions
 Options for JetLog
 
-**Kind**: global typedef  
+**Kind**: static typedef of [<code>JetLog</code>](#JetLog)  
 **Extends**: <code>module.scramjet:ScramjetOptions</code>  
 **Internal**:   
 **Properties**
