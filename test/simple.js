@@ -48,7 +48,7 @@ module.exports = {
     },
     async defaultOutput(test) {
 
-        const logger = require('../');
+        const logger = require("../");
         logger.info("Message1");
         logger.log("Message2");
         logger.error("Message3!");
