@@ -33,32 +33,32 @@ declare class JetLog {
     /**
      * Error method - adds a message to the log at level 1
      */
-    error(): Promise;
+    error(): Promise<any>;
 
     /**
      * Warn method - adds a message to the log at level 2
      */
-    warn(): Promise;
+    warn(): Promise<any>;
 
     /**
      * Log method - adds a message to the log at level 3
      */
-    log(): Promise;
+    log(): Promise<any>;
 
     /**
      * Info method - adds a message to the log at level 4
      */
-    info(): Promise;
+    info(): Promise<any>;
 
     /**
      * Debug method - adds a message to the log at level 5
      */
-    debug(): Promise;
+    debug(): Promise<any>;
 
     /**
      * Trace method - adds a message to the log at level 6
      */
-    trace(): Promise;
+    trace(): Promise<any>;
 
     /**
      * Defaults
