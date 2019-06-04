@@ -1,9 +1,9 @@
 <a name="module_jetlog"></a>
 
-## jetlog : JetLog
+## jetlog
 The main export is a global instance of the JetLog class automatically.
 
-<a name="exp_module_jetlog--defaultLogger"></a>
+<a name="exp_module_jetlog--module.exports"></a>
 
-### defaultLogger ⏏
-**Kind**: Exported constant  
+### module.exports : JetLog ⏏
+**Kind**: Exported member  
