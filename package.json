@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/signicode/jetlog#readme",
   "dependencies": {
-    "scramjet": "^4.25.1"
+    "scramjet": "^4.25.2"
   },
   "devDependencies": {
     "@otris/jsdoc-tsd": "^1.0.4",
