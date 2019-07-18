@@ -1,6 +1,6 @@
 {
   "name": "jetlog",
-  "version": "1.0.38",
+  "version": "1.0.39",
   "description": "Streamet logger with pluggable outputs and stream interface.",
   "main": "lib/index",
   "scripts": {
