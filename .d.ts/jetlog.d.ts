@@ -1,4 +1,6 @@
-declare class JetLog {
+import {DataStream} from "scramjet";
+
+declare class JetLog extends DataStream {
     /**
      * Constructor of jetlog
      * @param options options for the logger.
